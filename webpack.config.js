@@ -15,10 +15,18 @@ module.exports = {
       { test: /.jsx$/, exclude: /node_modules/, use: { loader: 'babel-loader', options: { presets: ['@babel/preset-react'] } } },
       // 第二個loader編譯ES6
       { test: /.js$/, exclude: /node_modules/, use: { loader: 'babel-loader', options: { presets: ['@babel/preset-env'] } } },
+      {
+        test: /\.(sass)$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
     ],
   },
   devServer: {
-    port: 9000,
+    port: 3000,
   },
   plugins: [
     new HtmlWebpackPlugin({

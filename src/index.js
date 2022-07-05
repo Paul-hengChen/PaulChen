@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './style/tailwind-pre-build.css';
 
-const element = <h1>dddddddffffdd, world!</h1>;
+const element = <div className="text-sm text-red-700">, world!</div>;
 
 ReactDOM.render(
   element,
