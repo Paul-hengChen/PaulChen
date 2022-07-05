@@ -1,9 +1,9 @@
 /* eslint-disable no-var */
 var path = require('path');
-// var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   entry: ['./src/index.js'],
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -27,4 +27,12 @@ module.exports = {
       favicon: './public/favicon.ico',
     }),
   ],
+  performance: {
+    hints: 'warning',
+    maxEntrypointSize: 50000000,
+    maxAssetSize: 30000000,
+    assetFilter(assetFilename) {
+      return assetFilename.endsWith('.js');
+    },
+  },
 };

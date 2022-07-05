@@ -9,8 +9,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "webpack --mode development",
-    "lint": "eslint ./src/**/*.js"
+    "lint": "eslint ./src/**/*.js",
+    "build": "webpack --mode development",
+    "dev": "npm run build && webpack-dev-server --mode development"
   },
   "eslintConfig": {
     "extends": [
