@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './style/tailwind-pre-build.css';
+import App from './App';
 
-const element = <div className="text-sm text-red-700">, world!</div>;
-
-ReactDOM.render(
-  element,
+ReactDOM.createRoot(
   document.getElementById('root'),
+).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
 );

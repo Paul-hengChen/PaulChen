@@ -30,9 +30,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html',
-      filename: './index.html',
-      favicon: './public/favicon.ico',
+      template: './src/index.html',
     }),
   ],
   performance: {
